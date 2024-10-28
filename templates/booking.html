@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/booking.css') }}">
+    <title>Đặt vé phim</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Đặt vé phim</h1>
+        <div class="main-content">
+            <div class="left-section">
+                <form method="POST" action="/booking">
+                    <label for="movie">Chọn phim:</label>
+                    <select id="movie" name="movie" required>
+                        <option value="">Chọn phim</option>
+                        <option value="Phim1">Phim 1</option>
+                        <option value="Phim2">Phim 2</option>
+                    </select>
+
+                    <label for="showtime">Chọn giờ chiếu:</label>
+                    <select id="showtime" name="showtime" required>
+                        <option value="">Chọn giờ chiếu</option>
+                        <option value="12:00">12:00</option>
+                        <option value="15:00">15:00</option>
+                    </select>
+
+                    <input type="hidden" id="selected_seats" name="selected_seats" value="">
+                    <button type="submit">Đặt vé</button>
+                </form>
+            </div>
+            <div class="right-section">
+                <div class="screen">Màn hình</div>
+                <div class="seat-selection">
+                    <!-- Tạo các ghế -->
+                    <div class="seat" data-seat-number="1">1</div>
+                    <div class="seat" data-seat-number="2">2</div>
+                    <div class="seat" data-seat-number="3">3</div>
+                    <div class="seat" data-seat-number="4">4</div>
+                    <div class="seat" data-seat-number="5">5</div>
+                    <div class="seat" data-seat-number="6">6</div>
+                    <div class="seat" data-seat-number="7">7</div>
+                    <div class="seat" data-seat-number="8">8</div>
+                    <div class="seat" data-seat-number="9">9</div>
+                    <div class="seat" data-seat-number="10">10</div>
+                    <div class="seat" data-seat-number="11">11</div>
+                    <div class="seat" data-seat-number="12">12</div>
+                    <div class="seat" data-seat-number="13">13</div>
+                    <div class="seat" data-seat-number="14">14</div>
+                    <div class="seat" data-seat-number="15">15</div>
+                    <div class="seat" data-seat-number="16">16</div>
+                    <div class="seat" data-seat-number="17">17</div>
+                    <div class="seat" data-seat-number="18">18</div>
+                    <div class="seat" data-seat-number="19">19</div>
+                    <div class="seat" data-seat-number="20">20</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/booking.js') }}"></script>
+</body>
+</html>

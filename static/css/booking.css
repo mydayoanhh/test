@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.left-section {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.screen {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 80%;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.seat-selection {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 ghế mỗi hàng */
+    gap: 10px;
+    justify-items: center;
+}
+
+.seat {
+    background-color: #ccc;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.seat:hover {
+    background-color: #999;
+}
+
+.seat.selected {
+    background-color: #6c5ce7; /* Màu cho ghế đã chọn */
+    color: white;
+}
+
+.seat.booked {
+    background-color: #e74c3c; /* Màu cho ghế đã đặt */
+    color: white;
+    cursor: not-allowed; /* Không cho phép click vào ghế đã đặt */
+}
